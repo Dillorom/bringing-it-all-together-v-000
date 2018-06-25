@@ -1,7 +1,6 @@
 class Dog
   attr_accessor :id, :name, :breed
 
-
   def initialize(id: nil, name:, breed:)
     @id = id
     @name = name
@@ -44,7 +43,6 @@ class Dog
   def self.new_from_db(row)
     self.new({id: row[0], name: row[1], breed: row[2]})
   end
-
 
   def self.find_by_id(id)
     sql = <<-SQL
