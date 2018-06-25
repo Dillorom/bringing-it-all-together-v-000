@@ -42,11 +42,7 @@ class Dog
   end
 
   def self.new_from_db(row)
-    self.new.tap do |dog|
-    dog.id = row[0]
-    dog.name = row[1]
-    dog.breed = row[2]
-    end
+    self.new({id: row[0], name: row[1], breed: row[2]})
   end
 
 
